@@ -1,0 +1,13 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>File data:</strong>
+  <%= @video.file_data %>
+</p>
+
+<video controls width="320">
+  <source src="<%= @video.file[:video].url %>">
+</video>
+
+<%= link_to 'Edit', edit_video_path(@video) %> |
+<%= link_to 'Back', videos_path %>
